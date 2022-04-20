@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="811.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.autificationsql.mainController">
+    <TableView fx:id="userTable" layoutX="13.0" layoutY="191.0" prefHeight="373.0" prefWidth="786.0">
+      <columns>
+          <TableColumn fx:id="idCol" maxWidth="25.0" prefWidth="25.0" style="-fx-alignment: center;" text="ID" />
+          <TableColumn fx:id="nameCol" maxWidth="220.0" prefWidth="220.0" style="-fx-alignment: center;" text="NAME" />
+          <TableColumn fx:id="birthCol" maxWidth="100.0" prefWidth="100.0" style="-fx-alignment: center;" text="BIRTH DATE" />
+          <TableColumn fx:id="adressCol" maxWidth="220.0" prefWidth="220.0" style="-fx-alignment: center;" text="ADRESS" />
+          <TableColumn fx:id="emailCol" maxWidth="219.0" prefWidth="219.0" style="-fx-alignment: center;" text="EMAIL" />
+      </columns>
+        <effect>
+          <DropShadow />
+        </effect>
+    </TableView>
+    <Pane layoutY="85.0" prefHeight="6.0" prefWidth="855.0" style="-fx-background-color: black;" />
+    <Label layoutX="13.0" layoutY="-8.0" prefHeight="99.0" prefWidth="349.0" text="DBEditor">
+        <font>
+          <Font size="58.0" />
+        </font>
+    </Label>
+    <Button alignment="CENTER" layoutX="746.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#close" prefHeight="32.0" prefWidth="53.0" style="-fx-background-color: #2baef5;" text="Exit" textFill="WHITE">
+        <effect>
+          <DropShadow />
+        </effect>
+        <font>
+          <Font name="System Bold Italic" size="13.0" />
+        </font>
+    </Button>
+   <HBox layoutX="14.0" layoutY="93.0" prefHeight="93.0" prefWidth="563.0">
+      <children>
+          <Button alignment="CENTER" mnemonicParsing="false" onMouseClicked="#getAddView" prefHeight="45.0" prefWidth="110.0" style="-fx-background-radius: 10; -fx-background-color: #2baef5;" text="Add User" textFill="WHITE">
+              <effect>
+                <DropShadow />
+              </effect>
+              <font>
+                <Font name="System Bold" size="18.0" />
+              </font>
+            <HBox.margin>
+               <Insets bottom="20.0" left="5.0" right="5.0" top="20.0" />
+            </HBox.margin>
+          </Button>
+         <Button alignment="CENTER" mnemonicParsing="false" onMouseClicked="#getEditView" prefHeight="45.0" prefWidth="116.0" style="-fx-background-radius: 10; -fx-background-color: #2baef5;" text="Edit User" textFill="WHITE">
+            <effect>
+               <DropShadow />
+            </effect>
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font>
+            <HBox.margin>
+               <Insets bottom="20.0" left="5.0" right="5.0" top="20.0" />
+            </HBox.margin>
+         </Button>
+         <Button alignment="CENTER" mnemonicParsing="false" onMouseClicked="#getDeleteView" prefHeight="45.0" prefWidth="126.0" style="-fx-background-radius: 10; -fx-background-color: #2baef5;" text="Delete User" textFill="WHITE">
+            <effect>
+               <DropShadow />
+            </effect>
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font>
+            <HBox.margin>
+               <Insets bottom="20.0" left="5.0" right="5.0" top="20.0" />
+            </HBox.margin>
+         </Button>
+          <Button alignment="CENTER" mnemonicParsing="false" onMouseClicked="#refreshTable" prefHeight="45.0" prefWidth="142.0" style="-fx-background-radius: 10; -fx-background-color: #2baef5;" text="Refresh Table" textFill="WHITE">
+              <effect>
+                <DropShadow />
+              </effect>
+              <font>
+                <Font name="System Bold" size="18.0" />
+              </font>
+            <HBox.margin>
+               <Insets bottom="20.0" left="5.0" right="5.0" top="20.0" />
+            </HBox.margin>
+          </Button>
+      </children>
+   </HBox>
+</AnchorPane>
